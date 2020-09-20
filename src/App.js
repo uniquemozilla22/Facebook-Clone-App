@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="app">
     <Header/>
-     {/* Header */}
      {/* App Body */}
       {/* Sidebar */}
       {/* Feed */}
