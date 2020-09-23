@@ -2,10 +2,10 @@ import React from 'react'
 
 import './SidebarRow.css'
 
-const SidebarRow = () => {
+const SidebarRow = (props) => {
     return (
         <div className="sidebarRow">
-            
+            {props.title}
         </div>
     )
 }

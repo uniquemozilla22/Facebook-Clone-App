@@ -1,10 +1,14 @@
 import React from 'react'
 import SidebarRow from'./SidebarRow.js'
 
-const Sidebar = () => {
+const Sidebar = (props) => {
     return (
         <div className="sidebar">
-            <SidebarRow/>
+            <SidebarRow title="friends"/>
+            <SidebarRow title="contactUs"/>
+            <SidebarRow title="DiscoverPeople"/>
+            <SidebarRow title="FindFriends"/>
+            <SidebarRow title="Play Games"/>  
         </div>
     )
 }

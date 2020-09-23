@@ -1,3 +1,8 @@
 *{
     margin:0;
 }
+
+.dark__mode{
+    color:#fff !important;
+    background-color: rgb(6, 6, 39) !important;
+}
