@@ -1,5 +1,7 @@
 import { Avatar } from '@material-ui/core'
+import { InsertEmoticon, PhotoLibrary, Videocam } from '@material-ui/icons'
 import React from 'react'
+import FeedOptions from './FeedOptions'
 import './MessageSender.css'
 const MessageSender = () => {
 
@@ -19,9 +21,14 @@ const MessageSender = () => {
             </div>
             <div className="messageSender__bottom">
                 <div className="messageSender__option">
-                    <VideoCam style={{color:'red'}}/>
-                    <h3>Live Video</h3>
+                    <FeedOptions title="Live Video" icon={Videocam} colored="red"/>
+                    </div>
+                <div className="messageSender__option">
+                    <FeedOptions title="Photo/Video" icon={PhotoLibrary} colored="green"/>
+                    </div>
+                <div className="messageSender__option">
 
+                    <FeedOptions title="Feeling/Activity" icon={InsertEmoticon} colored="red"/>
                 </div>
                 
             </div>
