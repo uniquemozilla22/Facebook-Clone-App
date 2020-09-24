@@ -1,23 +1,24 @@
 import { Chat, EmojiFlags, People, Storefront, VideoLibrary ,ExpandMoreOutlined} from '@material-ui/icons'
 import React from 'react'
 import SidebarRow from'./SidebarRow.js'
+import './Sidebar.css'
 
 const Sidebar = () => {
     return (
         <div className="sidebar">
             <SidebarRow src={'https://www.yogesh-bhattarai.com/img/home-bg-2.jpg'} title={'Yogesh Bhattarai'}/>
 
-            <SidebarRow Icon={EmojiFlags}
+            <SidebarRow icon={EmojiFlags}
             title="Pages"/>
-            <SidebarRow Icon={People}
+            <SidebarRow icon={People}
             title="Friends"/>
-            <SidebarRow Icon={Chat}
+            <SidebarRow icon={Chat}
             title="Messenger"/>
-            <SidebarRow Icon={Storefront}
+            <SidebarRow icon={Storefront}
             title="Marketplace"/>
-            <SidebarRow Icon={VideoLibrary}
-            title="COVID-19 INFORMATION CENTER"/>
-            <SidebarRow Icon={ExpandMoreOutlined}
+            <SidebarRow icon={VideoLibrary}
+            title="Video"/>
+            <SidebarRow icon={ExpandMoreOutlined}
             title="Marketplace"/>
 
         </div>

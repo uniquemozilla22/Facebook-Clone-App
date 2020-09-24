@@ -3,12 +3,19 @@ import React from 'react'
 
 import './SidebarRow.css'
 
-const SidebarRow = (src,Icon , title) => {
+const SidebarRow = (props) => {
+    let Icon =props.icon
+
+    let printing=<Icon/>
+    if(props.src!=null)
+    {
+         printing = <Avatar src={props.src}/>
+    }
+    
     return (
         <div className="sidebarRow">
-            {src&&<Avatar src={src}/>}
-            {Icon && <Icon />}
-            <h4>{title}</h4>
+            {printing}
+            <h4>{props.title}</h4>
         </div>
     )
 }

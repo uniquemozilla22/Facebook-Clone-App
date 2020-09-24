@@ -42,7 +42,7 @@ const Header = () => {
             </div>
             <div className="header__right">
                 <div className="header__info">
-                    <Avatar/>
+                    <Avatar src="https://www.yogesh-bhattarai.com/img/home-bg-2.jpg"/>
                     <h4>Yogesh</h4>
                     <IconButton>
                         <AddIcon />
