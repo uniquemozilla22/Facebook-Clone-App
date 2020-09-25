@@ -9,8 +9,8 @@ const Feed = () => {
         <div className="feed">
             <StoryReel/>
             <MessageSender />
-            <Post profilePic={'https://www.yogesh-bhattarai.com/img/home-bg-2.jpg'}  message={'This is just awesome Man i just made React facebook application for website.'}
-             username={'Yogesh Bhattarai'} image={'https://www.yogesh-bhattarai.com/img/home-bg-2.jpg'} />
+            <Post profilePic={'./Logo/home-bg-2.jpg'}  message={'This is just awesome Man i just made React facebook application for website.'}
+             username={'Yogesh Bhattarai'} image={'./Logo/home-bg-2.jpg'} />
         </div>
     )
 }

@@ -18,7 +18,7 @@ const MessageSender = () => {
     return (
         <div className="messageSender">
             <div className="messageSender__top">
-            <Avatar src="https://www.yogesh-bhattarai.com/img/home-bg-2.jpg"/>
+            <Avatar src="./Logo/home-bg-2.jpg"/>
             <form>
                 <input  value ={input} onChange={(e)=>setInput(e.target.value)} type="text" placeholder="What's on your mind?" />
                 <input value ={image} onChange={(e)=>setImage(e.target.value)}  type="text" placeholder="Image Url Here(optional)"/>
