@@ -2,7 +2,7 @@ import React from 'react'
 import './Login.css'
 import Logo from '././Logo/facebook-f-logo-white-background-21.jpg'
 import { Button } from '@material-ui/core'
-import actionTypes from './Reducer'
+import {actionTypes} from './Reducer'
 import {useStateValue} from "./StateProvider"
 import {auth , provider} from './firebase'
 
