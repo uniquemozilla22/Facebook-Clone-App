@@ -2,11 +2,15 @@ import { Chat, EmojiFlags, People, Storefront, VideoLibrary ,ExpandMoreOutlined}
 import React from 'react'
 import SidebarRow from'./SidebarRow.js'
 import './Sidebar.css'
+import { useStateValue } from './StateProvider.js'
 
 const Sidebar = () => {
+
+    const [{user}, dispatch]= useStateValue()
+
     return (
         <div className="sidebar">
-            <SidebarRow src={'https://www.yogesh-bhattarai.com/img/home-bg-2.jpg'} title={'Yogesh Bhattarai'}/>
+            <SidebarRow src={''} title={'Yogesh'}/>
 
             <SidebarRow icon={EmojiFlags}
             title="Pages"/>

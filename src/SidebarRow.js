@@ -3,7 +3,9 @@ import React from 'react'
 import './SidebarRow.css'
 
 const SidebarRow = (props) => {
-    let Icon =props.icon
+    let Icon =" "
+    
+    Icon= props.icon
 
     let printing=<Icon/>
     if(props.src!=null)

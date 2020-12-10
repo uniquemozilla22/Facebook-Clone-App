@@ -6,14 +6,19 @@ import './Header.css'
 import AddIcon from '@material-ui/icons/Add'
 import { ExpandMore,StorefrontOutlined, SubscriptionsOutlined, SupervisedUserCircle,Forum,NotificationsActive } from '@material-ui/icons'
 import { Avatar, IconButton } from '@material-ui/core'
+import logo from './Logo/th.jpg'
+import thoda from './Logo/home-bg-2.jpg'
+import {useStateValue} from './StateProvider'
 
 
 const Header = () => {
+
+    const [{user},dispatch]=useStateValue();
    
     return (
         <div className={"header"}>
             <div className="header__left">
-                <img src="./Logo/th.jpg" alt="Facebook-Clone"/>
+                <img src={logo} alt="Facebook-Clone"/>
             
             <div className="header__input">
                 <SearchIcon />
@@ -39,7 +44,7 @@ const Header = () => {
             </div>
             <div className="header__right">
                 <div className="header__info">
-                    <Avatar src="-"/>
+                    <Avatar src={thoda}/>
                     <h4>Yogesh</h4>
                     <IconButton>
                         <AddIcon />

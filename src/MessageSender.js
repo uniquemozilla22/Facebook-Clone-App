@@ -3,10 +3,13 @@ import { InsertEmoticon, PhotoLibrary, Videocam } from '@material-ui/icons'
 import React ,{useState} from 'react'
 import FeedOptions from './FeedOptions'
 import './MessageSender.css'
+import {useStateValue} from './StateProvider'
+
 const MessageSender = () => {
 
     const [input ,setInput]=useState('')
     const [image ,setImage]=useState('')
+    const [{user},dispatch] = useStateValue()
 
     const handleSubmit=(event)=>{
         event.preventDefault();
@@ -18,11 +21,11 @@ const MessageSender = () => {
     return (
         <div className="messageSender">
             <div className="messageSender__top">
-            <Avatar src="./Logo/home-bg-2.jpg"/>
+            <Avatar src={''}/>
             <form>
-                <input  value ={input} onChange={(e)=>setInput(e.target.value)} type="text" placeholder="What's on your mind?" />
+                <input  value ={input} onChange={(e)=>setInput(e.target.value)} type="text" placeholder={"What's on your mind?"+user} />
                 <input value ={image} onChange={(e)=>setImage(e.target.value)}  type="text" placeholder="Image Url Here(optional)"/>
-                <button onCLick={handleSubmit} type="submit"> Hidden Button</button>
+                <button onClick={handleSubmit} type="submit"> Hidden Button</button>
             </form>
             </div>
             <div className="messageSender__bottom">

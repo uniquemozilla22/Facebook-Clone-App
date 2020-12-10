@@ -18,7 +18,6 @@ const Login = (props) => {
                 type:actionTypes.SET_USER,
                 user:result.user
             })
-            console.log(result.user)
 
 
         })

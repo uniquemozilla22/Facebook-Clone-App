@@ -10,7 +10,7 @@ const Post = (props) => {
                 <Avatar className="post__avatar" src ={props.profilePic}/>
             <div className="post_topInfo">
                 <h3>{props.username}</h3>
-                <p>11:11AM</p>
+                <p>{props.timeStamp}</p>
             </div>
 
             </div>
