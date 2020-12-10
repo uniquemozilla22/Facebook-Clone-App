@@ -4,27 +4,36 @@ import React ,{useState} from 'react'
 import FeedOptions from './FeedOptions'
 import './MessageSender.css'
 import {useStateValue} from './StateProvider'
+import {db} from './firebase'
+import firebase from 'firebase'
 
-const MessageSender = () => {
+const MessageSender = () => {  
 
     const [input ,setInput]=useState('')
-    const [image ,setImage]=useState('')
+    const [imageUrl ,setImageUrl]=useState('')
     const [{user},dispatch] = useStateValue()
 
     const handleSubmit=(event)=>{
         event.preventDefault();
 
+        db.collection('posts').add({
+            message: input,
+            timestamp:firebase.firestore.FieldValue.serverTimestamp(),
+            profilePic:user.photoURL,
+            username: user.displayName,
+            image:imageUrl
+        })
         setInput('');
-        setImage('');
+        setImageUrl('');
 
     }
     return (
         <div className="messageSender">
             <div className="messageSender__top">
-            <Avatar src={''}/>
+            <Avatar src={user.photoURL}/>
             <form>
-                <input  value ={input} onChange={(e)=>setInput(e.target.value)} type="text" placeholder={"What's on your mind?"+user} />
-                <input value ={image} onChange={(e)=>setImage(e.target.value)}  type="text" placeholder="Image Url Here(optional)"/>
+                <input  value ={input} onChange={(e)=>setInput(e.target.value)} type="text" placeholder={"What's on your mind?"+user.displayName} />
+                <input value ={imageUrl} onChange={(e)=>setImageUrl(e.target.value)}  type="text" placeholder="Image Url Here(optional)"/>
                 <button onClick={handleSubmit} type="submit"> Hidden Button</button>
             </form>
             </div>

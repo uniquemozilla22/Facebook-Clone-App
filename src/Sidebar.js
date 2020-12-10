@@ -10,7 +10,7 @@ const Sidebar = () => {
 
     return (
         <div className="sidebar">
-            <SidebarRow src={''} title={'Yogesh'}/>
+            <SidebarRow src={user.photoURL} title={user.displayName}/>
 
             <SidebarRow icon={EmojiFlags}
             title="Pages"/>

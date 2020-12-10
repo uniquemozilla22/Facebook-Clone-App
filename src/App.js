@@ -11,7 +11,7 @@ function App() {
 
   let [{user},dispatch]=useStateValue();
 
-  user="l"
+  
 
   return(
     <div className="app">
@@ -30,13 +30,5 @@ function App() {
       )}
     </div>
     
-  );
-    
-      
-    
-  }
-  
-  
-
-
-export default App;
+  );   
+  }export default App;
